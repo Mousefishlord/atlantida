@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            colors: {
+                'light-blue': '#2f2fa2',
+                'blue': '#242582',
+                'purple': '#7e5bef',
+                'purple-logo':'#7030a0',
+                'pink': '#f64C72',
+                'pink-logo': '#c27fb4',
+                'orange': '#ff7849',
+                'green': '#13ce66',
+                'yellow': '#ffc82c',
+                'gray-dark': '#273444',
+                'gray': '#8492a6',
+                'gray-light': '#d3dce6',
+                'white':'#FFFFFF',
+                'low-pink':'#99738E',
+            },
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+      <script>
+        function onEntry(entry) {
+            entry.forEach(change => {
+                if (change.isIntersecting) {
+                change.target.classList.add('element-show');
+                }
+            });
+            }
+
+            let options = {
+            threshold: [0.5] };
+            let observer = new IntersectionObserver(onEntry, options);
+            let elements = document.querySelectorAll('.element-animation');
+
+            for (let elm of elements) {
+            observer.observe(elm);
+        }
+      </script>
+      <style>
+        .element-animation {
+            margin: 2rem 0;
+            font-size: 3rem;
+            opacity: 0;
+        }
+
+        .element-animation.element-show {
+            opacity: 1;
+            transition: all 1.5s;
+        }
+      </style>
+</head>
+<body class="bg-light-white">
+    
+    <nav class="mx-auto max-w-7xl my-4 px-4 sm:px-6 lg:px-8 relative z-50 flex justify-between py-8 bg-pink-logo rounded-full">
+        <a href ="index.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">Главная страница</span>
+        </a>
+        <a href ="command.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">Команда</span>
+        </a>
+        <a href ="info.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">О разработке сайта</span>
+        </a>
+        <a href ="backend.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">Различные бэкенд специальности</span>
+        </a>
+        <a href ="lifehacks.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">Лайфхаки бэкендера</span>
+        </a>
+    </nav>
+    <div class="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h1 class=" text-purple text-7xl font-bold mx-auto mb-12 text-center">
+                Команда
+            </h1>
+            <div class="lg:grid grid-cols-3 gap-x-10">
+                <img src="../img/litkin.jpg" class="col-span-1 mx-auto border-8 border-blue my-4">
+                <h2 class="col-span-2 text-purple text-5xl font-bold mx-auto my-auto my-4">
+                    Лыткин Даниил, 3 курс. Я активный и очень трудолюбивый, но к сожалению в тоже самое время через чур говорливый.
+                </h2>
+            </div>
+            <div class="lg:grid grid-cols-3 gap-x-10">
+                <h2 class="col-span-2 text-purple text-5xl font-bold mx-auto my-auto my-4">
+                    Семён, 19 лет, 2 курс, хочу спать, отпустите меня домой.
+                </h2>
+                <img src="../img/semen.jpg" class="col-span-1 mx-auto border-8 border-blue my-4">
+                
+            </div>
+            <div class="lg:grid grid-cols-3 gap-x-10">
+                <img src="../img/sanya.jpg" class="col-span-1 mx-auto border-8 border-blue my-4">
+                <h2 class="col-span-2 text-purple text-5xl font-bold mx-auto my-auto my-4">
+                    Александр Робеко, 3 курс. Я не знаю, но даже свет попытался сделать меня худым.
+                </h2>
+            </div>
+            <div class="lg:grid grid-cols-3 gap-x-10">
+                <h2 class="col-span-2 text-purple text-5xl font-bold mx-auto my-auto my-4">
+                    Ярослав. 19 лет 2 курс. Помогите с домашкой пж. Не унывайте, я сделал это за вас.
+                </h2>
+                <img src="../img/yaroslav.jpg" class="col-span-1 mx-auto border-8 border-blue my-4">
+                
+            </div>
+            <div class="lg:grid grid-cols-3 gap-x-10">
+                <img src="../img/ilya.jpg" class="col-span-1 mx-auto border-8 border-blue my-4">
+                <h2 class="col-span-2 text-purple text-5xl font-bold mx-auto my-auto my-4">
+                    Илья, 19, 2 курс. Не знаю какая сейчас пара.
+                </h2>
+            </div>
+        </div>
+    </div>
+    <footer class="border-t border-purple">
+        <div class="flex flex-colmx-auto items-center max-w-[80vw] mx-auto md:flex-row-reverse md:justify-between">
+            <p class="text-purple mx-4 my-4 text-[18px] font-medium">Created by Atlant's team</p>
+            <p class="text-purple mx-4 my-4 text-[18px] font-medium">2022-2022 © All rights reserverved.</p>
+        </div>
+    </footer>
+</body>
+</html>

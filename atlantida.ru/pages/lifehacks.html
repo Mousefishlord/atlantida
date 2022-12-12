@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            colors: {
+                'light-blue': '#2f2fa2',
+                'blue': '#242582',
+                'purple': '#7e5bef',
+                'purple-logo':'#7030a0',
+                'pink': '#f64C72',
+                'pink-logo': '#c27fb4',
+                'orange': '#ff7849',
+                'green': '#13ce66',
+                'yellow': '#ffc82c',
+                'gray-dark': '#273444',
+                'gray': '#8492a6',
+                'gray-light': '#d3dce6',
+                'white':'#FFFFFF',
+                'low-pink':'#99738E',
+            },
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="bg-light-white">
+    
+    <nav class="mx-auto max-w-7xl my-4 px-4 sm:px-6 lg:px-8 relative z-50 flex justify-between py-8 bg-pink-logo rounded-full">
+        <a href ="index.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">Главная страница</span>
+        </a>
+        <a href ="command.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">Команда</span>
+        </a>
+        <a href ="info.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">О разработке сайта</span>
+        </a>
+        <a href ="backend.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">Различные бэкенд специальности</span>
+        </a>
+        <a href ="lifehacks.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">Лайфхаки бэкендера</span>
+        </a>
+    </nav>
+    <div class="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid grid-cols-3 gap-x-10">
+                <img src="../img/lh.jpg" class="col-span-1 mx-auto border-8 border-blue">
+                <h2 class="col-span-2 text-purple text-5xl font-bold mx-auto my-auto">
+                    Лайфхаки бэкендера
+                </h2>
+                <p class="text-purple text-2xl font-normal my-5 col-span-3">
+                    На самом деле у меня есть небольшой опыт в бэкенде, если вы хотите влиться в данную тематику, в данном разделе я припас некоторые советы, 
+                    которые помогут вам в обучении.
+                </p>
+            </div>
+            <div class="">
+                <h2 class="text-purple text-5xl font-bold mx-auto my-auto">
+                    Для начала
+                </h2>
+                <p class="text-purple text-2xl font-normal my-5">
+                    Самое первое, что желательно сделать - купить ноутбук, если у вас его нет. Так вам будет проще работать. 
+                    Если у вас уже есть ноутбук или вы не горите желанием его покупать - есть второй вариант - установка второй ОС на ваш ПК. 
+                    Естественно нам будет необходимая ОС на базе линукса, лично я работаю на Linux Mint, советую посмотреть. 
+                    После того, как вы дошли до линукса, надо разобраться в ней. Посмотрите настройки вашего дистрибутива, сделайте их удобнее для себя, 
+                    попробуйте поработать на этой системе как обычно. После того, как вы привыкните хоть немного к новой обстановке, если вы работаете с ноутбука, 
+                    попробуйте подключить samba для возможности работы ещё и со стационарного ПК(сам делаю, очень удобно).
+                </p>
+            </div>
+            <div class="">
+                <h2 class="text-purple text-5xl font-bold mx-auto my-auto">
+                    Следующий шаг
+                </h2>
+                <p class="text-purple text-2xl font-normal my-5">
+                    Вы установили новую ОС под Линуксом, теперь самое время разобраться с командной строкой. Вся необходимая информация есть в интернете. 
+                    Лично я советую вам для начала разобраться со системой пользователей, командами chmod, chown, cp, cd, mkdir, apt(или ваш пакетный менеджер), 
+                    sudo, su, history.
+                </p>
+            </div>
+            <div class="">
+                <h2 class="text-purple text-5xl font-bold mx-auto my-auto">
+                    Обучение только сейчас?
+                </h2>
+                <p class="text-purple text-2xl font-normal my-5">
+                    Да, теперь время обучения. Для начала попробуйте установить к себе на компьютер стек LAMP. Как только это у вас выйдет, можно переходить к изучению SQL.
+                    Лучше всего SQL изучить через sql-ex(моё личное субъективное непрофессиональное мнение).
+                    Попутно с SQL изучите HTML и CSS. Их изучение мне показалось одним из самых простых. (однако это не значит, что это слабый инструмент) 
+                    Теперь приступайте к изучению PHP. PHP можно изучать самостоятельно, есть документация на русском, либо через Stepik на соответствующем курсе по PHP.
+                </p>
+            </div>
+            <div class="">
+                <h2 class="text-purple text-5xl font-bold mx-auto my-auto">
+                    Итог
+                </h2>
+                <p class="text-purple text-2xl font-normal my-5">
+                    После того, как вы узнаете всё необходимое для бэкендера, нужно вспомнить, что бэкендер - довольно таки абстрактная профессия. Но как так? 
+                    Техническая профессия и творчество? Именно. Любая задача бэкендера может решаться невероятным множеством решений, необходимо оценивать множество факторов. 
+                    Чтобы легче понимать, представьте, что в БД есть значения профессии: архитектор, профессор и слесарь. Каким образом нам лучше выводить их всех?
+                    Очевидно сделать запрос к БД с параметрами выдачи всех профессий. А если нам нужна только одна профессия? Сделать фильтр в самом запросе или написать скрипт на ЯП, 
+                    который отфильтрует запрос? А что быстрее? А может быть нам необходимо экономить ресурсы БД и не заставлять машину лишний раз подвергать работе?
+                    Поэтому и возникает множество всяких условностей.
+                </p>
+                <h3 class="text-purple text-3xl font-medium mx-auto my-auto">
+                    Опыт
+                </h3>
+                <p class="text-purple text-2xl font-normal my-5">
+                    Когда вы будете делать свою первую работу самостоятельно, вам скорее всего будет абсолютно плевать на читаемость кода, sql-инъекции, структуру и другие тонкости. 
+                    Однако чем дальше вы пойдёте - тем больше различных упрощений для себя создадите и одна и та же задача для вас будет упрощаться.
+                    Опыт - необходимый аспект бэкендера. Попробуйте поработать самостоятельно над средним проектом с простейшей авторизацией. Вероятно вы не сможете за один вечер 
+                    написать весь код, и на завтрашний день вас будет ждать сюрприз - вы не понимаете код. И это нормально, впредь вы постараетесь писать код более читаемым. И таким
+                    образом решаться большинство ваших проблем, они просто уйдут с опытом, а навыки с опытом наоборот - придут.
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer class="border-t border-purple">
+        <div class="flex flex-colmx-auto items-center max-w-[80vw] mx-auto md:flex-row-reverse md:justify-between">
+            <p class="text-purple mx-4 my-4 text-[18px] font-medium">Created by Atlant's team</p>
+            <p class="text-purple mx-4 my-4 text-[18px] font-medium">2022-2022 © All rights reserverved.</p>
+        </div>
+    </footer>
+</body>
+</html>

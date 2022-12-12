@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            colors: {
+                'light-blue': '#2f2fa2',
+                'blue': '#242582',
+                'purple': '#7e5bef',
+                'purple-logo':'#7030a0',
+                'pink': '#f64C72',
+                'pink-logo': '#c27fb4',
+                'orange': '#ff7849',
+                'green': '#13ce66',
+                'yellow': '#ffc82c',
+                'gray-dark': '#273444',
+                'gray': '#8492a6',
+                'gray-light': '#d3dce6',
+                'white':'#FFFFFF',
+                'low-pink':'#99738E',
+            },
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="bg-light-white">
+    
+    <nav class="mx-auto max-w-7xl my-4 px-4 sm:px-6 lg:px-8 relative z-50 flex justify-between py-8 bg-pink-logo rounded-full">
+        <a href ="index.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">Главная страница</span>
+        </a>
+        <a href ="command.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">Команда</span>
+        </a>
+        <a href ="info.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">О разработке сайта</span>
+        </a>
+        <a href ="backend.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">Различные бэкенд специальности</span>
+        </a>
+        <a href ="lifehacks.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">Лайфхаки бэкендера</span>
+        </a>
+    </nav>
+    <div class="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:grid grid-cols-2 gap-x-10">
+            <img src="../img/logo.jpg" class="col-span-1 mx-auto border-8 border-blue">
+            <p class="col-span-1 text-purple text-3xl font-medium my-10 mx-auto">
+                Наша команда - IT-АТЛАНТЫ, чей референс относит нас к древнегреческой мифологии, а именно к Антланту(также извествен как Атлас), который на своих плечах держит небосвод
+                <br><br>Также и мы поддерживаем мир интернета вдали от глаз пользователей.
+            </p>
+        </div>
+    </div>
+    <footer class="border-t border-purple">
+        <div class="flex flex-colmx-auto items-center max-w-[80vw] mx-auto md:flex-row-reverse md:justify-between">
+            <p class="text-purple mx-4 my-4 text-[18px] font-medium">Created by Atlant's team</p>
+            <p class="text-purple mx-4 my-4 text-[18px] font-medium">2022-2022 © All rights reserverved.</p>
+        </div>
+    </footer>
+</body>
+</html>

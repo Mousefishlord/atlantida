@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            colors: {
+                'light-blue': '#2f2fa2',
+                'blue': '#242582',
+                'purple': '#7e5bef',
+                'purple-logo':'#7030a0',
+                'pink': '#f64C72',
+                'pink-logo': '#c27fb4',
+                'orange': '#ff7849',
+                'green': '#13ce66',
+                'yellow': '#ffc82c',
+                'gray-dark': '#273444',
+                'gray': '#8492a6',
+                'gray-light': '#d3dce6',
+                'white':'#FFFFFF',
+                'low-pink':'#99738E',
+            },
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+      <script>
+        function onEntry(entry) {
+            entry.forEach(change => {
+                if (change.isIntersecting) {
+                change.target.classList.add('element-show');
+                }
+            });
+            }
+
+            let options = {
+            threshold: [0.5] };
+            let observer = new IntersectionObserver(onEntry, options);
+            let elements = document.querySelectorAll('.element-animation');
+
+            for (let elm of elements) {
+            observer.observe(elm);
+        }
+      </script>
+      <style>
+        .element-animation {
+            margin: 2rem 0;
+            font-size: 3rem;
+            opacity: 0;
+        }
+
+        .element-animation.element-show {
+            opacity: 1;
+            transition: all 1.5s;
+        }
+      </style>
+</head>
+<body class="bg-light-white">
+    
+    <nav class="mx-auto max-w-7xl my-4 px-4 sm:px-6 lg:px-8 relative z-50 flex justify-between py-8 bg-pink-logo rounded-full">
+        <a href ="index.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">Главная страница</span>
+        </a>
+        <a href ="command.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">Команда</span>
+        </a>
+        <a href ="info.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">О разработке сайта</span>
+        </a>
+        <a href ="backend.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">Различные бэкенд специальности</span>
+        </a>
+        <a href ="lifehacks.html"class="relative -my-2 -mx-3 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-purple-logo hover:delay-[0ms] text-lg font-medium text-white text-center">
+            <span class="relative z-10">Лайфхаки бэкендера</span>
+        </a>
+    </nav>
+    <div class="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid grid-cols-3 gap-x-10">
+                <img src="../img/backend.png" class="col-span-1 mx-auto border-8 border-blue">
+                <h2 class="col-span-2 text-purple text-5xl font-bold mx-auto my-auto">
+                    Backend-разработчик: кто это такой и чем он занимается.
+                </h2>
+                <p class="text-purple text-2xl font-normal my-5 col-span-3">Backend-разработчик — программист, 
+                    который пишет серверный код, отвечает за реакцию ресурса на действия пользователя и выдачу информации. 
+                    Работа бэкендера внешне незаметна: пользователь не думает, как устроен сайт изнутри. 
+                    Но если серверный код написан с ошибками, он не будет нормально работать.
+                </p>
+            </div>
+            <div class="lg:grid grid-cols-3 gap-x-10 mt-8">
+                <img src="../img/group.jpg" class="col-span-1 mx-auto border-8 border-blue">
+                <h2 class="col-span-2 text-purple text-5xl font-bold mx-auto my-auto">
+                    Кому нужен Backend-разработчик?
+                </h2>
+                <p class="text-purple text-2xl font-normal my-5 col-span-3">
+                    Бэкенд-разработчик необходим компаниям, которые взаимодействуют с клиентом через веб-интерфейс, при этом существует необходимость в работе с базой данных
+                    или некоторая обработка информации, например редактирование фотографий. Также бэкендер необходим при создании сайтов с авторизацией и/или оплатой.
+                </p>
+            </div>
+            <div class="lg:grid grid-cols-3 gap-x-10 mt-8">
+                <img src="../img/bekend.png" class="col-span-1 mx-auto border-8 border-blue">
+                <h2 class="col-span-2 text-purple text-5xl font-bold mx-auto my-auto">
+                    Frontend и backend.
+                </h2>
+                <p class="col-span-3 text-purple text-2xl font-normal my-5">
+                    У любого веб-ресурса две стороны: внешняя (frontend) — клиентская, внутренняя (backend) — серверная. 
+                    Фронтенд — это живая картинка, всё что мы видим на сайте. Бэкенд — скрытая. То есть код «внутри», благодаря которому работают кнопки и функции сайта.
+                    <br><br>
+                    Вот простой пример. Вы хотите заказать товар в интернет-магазине. В каталоге видите кнопку «Купить». 
+                    Жмете на нее и переходите в корзину. Заполняете поля, нажимаете «Оплатить» и попадаете на сайт платежной системы. 
+                    Строка поиска товара в каталоге, кнопки, формы — это область фронтенд-разработки.
+                    <br><br>
+                    Все за кадром — за интерфейсом — относится к бэкенду. 
+                    Идентификация пользовательских данных, соединение с платежным шлюзом, передача информации — результаты труда backend-разработчика.
+                </p>
+            </div>
+            <div class="lg:grid grid-cols-3 gap-x-10 mt-8">
+                <img src="../img/sobes.jpg" class="col-span-1 mx-auto border-8 border-blue">
+                <h2 class="col-span-2 text-purple text-5xl font-bold mx-auto my-auto">
+                    Требование к бэкенд-разработчику.
+                </h2>
+                <p class="col-span-3 text-purple text-2xl font-normal my-5">
+                    Для старта в профессии нужна серьезная база знаний, умений и навыков.
+                </p>
+                <h3 class="col-span-3 text-purple text-3xl font-medium my-auto">
+                    Языки программирования
+                </h3>
+                <p class="col-span-3 text-purple text-2xl font-normal my-5">
+                    Знание хотя-бы одного из следующий языков программирования(для начала):
+                    <ul class="list-disc text-purple text-2xl font-normal my-5 ml-10">
+                        <li> C++</li>
+                        <li> C#</li>
+                        <li> PHP</li>
+                        <li> Ruby</li>
+                        <li> Python</li>
+                        <li> И другое</li>
+                    </ul>
+                </p>
+                <h3 class="col-span-3 text-purple text-3xl font-medium  my-auto">
+                    Умения
+                </h3>
+                <p class="col-span-3 text-purple text-2xl font-normal my-5">
+                    Информацию взял из настоящих требований от работодателя.
+                    <ul class="col-span-3 list-disc text-purple text-2xl font-normal my-5 ml-10">
+                        <li> Работа с несколькими СУБД</li>
+                        <li> Уметь работать с системой Git</li>
+                        <li> Понимать протоколы HTTP и HTTPS</li>
+                        <li> ООП</li>
+                        <li> Docker, docker-compose</li>
+                        <li> Уметь работать с Linux(желательно)</li>
+                        <li> SQL, проектирование, умение читать и строить ERD диаграммы</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="lg:grid grid-cols-3 gap-x-10 mt-8">
+                <img src="../img/tes.jpg" class="col-span-1 mx-auto border-8 border-blue">
+                <h2 class="col-span-2 text-purple text-5xl font-bold mx-auto my-auto">
+                    Как стать бэкендером?
+                </h2>
+                <p class="col-span-3 text-purple text-2xl font-normal my-5">
+                    Фундамент — высшее техническое образование. В идеале это IT-специальность. 
+                    Backend-разработчиком могут стать выпускники математического или физического факультетов. 
+                    Выходцам из непрофильных вузов сложнее получить профессию.
+                </p>
+                <h3 class="col-span-3 text-purple text-3xl font-medium my-auto">
+                    Где учиться?
+                </h3>
+                <p class="col-span-3 text-purple text-2xl font-normal my-5">
+                    Первый путь — самообразование. В сети много обучающих материалов: бесплатные книги, статьи, видеоуроки, блоги и форумы. 
+                    Преимущество самообразования — относительная дешевизна. Но такой путь — долгий и сложный.<br><br>
+                    Второй путь - пытаться узнавать информацию от преподавателей, просить дополнительные задания на определенную тему.<br><br>
+                    Третий путь - различные интернет площадки, которые имеют курсы на данную тему, например Stepik и курсы по PHP или JS.<br><br>
+                    В принципе, путь вы выбираете сами, я выбрал почти все три одновременно. Почему почти? Просто от самообразования я далеко.
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer class="border-t border-purple">
+        <div class="flex flex-colmx-auto items-center max-w-[80vw] mx-auto md:flex-row-reverse md:justify-between">
+            <p class="text-purple mx-4 my-4 text-[18px] font-medium">Created by Atlant's team</p>
+            <p class="text-purple mx-4 my-4 text-[18px] font-medium">2022-2022 © All rights reserverved.</p>
+        </div>
+    </footer>
+</body>
+</html>
